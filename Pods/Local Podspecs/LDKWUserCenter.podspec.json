@@ -1,0 +1,31 @@
+{
+  "name": "LDKWUserCenter",
+  "version": "0.1.2",
+  "summary": "User Center for the Kiwifruit!",
+  "description": "User Center for the Kiwifruit!",
+  "homepage": "https://git.ms.netease.com/PettyLoan/LDKWUserCenter.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lixingdong": "bjlixingdong@corp.netease.com"
+  },
+  "source": {
+    "git": "https://git.ms.netease.com/PettyLoan/LDKWUserCenter.git",
+    "tag": "0.1.2"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "public_header_files": [
+    "LDKWUserCenter/Classes/UC/UCAuthManager.h",
+    "LDKWUserCenter/Classes/Utils/UCUtilsHeader.h"
+  ],
+  "source_files": "LDKWUserCenter/Classes/**/*",
+  "dependencies": {
+    "LDKit": [
+      "~> 0.2.5"
+    ]
+  }
+}

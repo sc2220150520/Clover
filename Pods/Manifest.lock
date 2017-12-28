@@ -1,0 +1,138 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Crashlytics (3.9.3):
+    - Fabric (~> 1.7.2)
+  - Fabric (1.7.2)
+  - JLRoutes (1.5.5)
+  - KMNavigationBarTransition (1.1.5)
+  - LDEventCollection (0.3.4):
+    - LDPositioning (~> 0.1.1)
+    - ProtocolBuffers
+  - LDKit (0.2.12):
+    - LDKit/Feature (= 0.2.12)
+    - LDKit/FoundationCategory (= 0.2.12)
+    - LDKit/UIKit (= 0.2.12)
+    - LDKit/UIKitCategory (= 0.2.12)
+  - LDKit/Feature (0.2.12):
+    - LDKit/Feature/LDKeychain (= 0.2.12)
+  - LDKit/Feature/LDKeychain (0.2.12)
+  - LDKit/FoundationCategory (0.2.12)
+  - LDKit/UIKit (0.2.12):
+    - LDKit/FoundationCategory
+    - LDKit/UIKit/LDLightAlert (= 0.2.12)
+    - LDKit/UIKit/MessageBoxView (= 0.2.12)
+  - LDKit/UIKit/LDLightAlert (0.2.12):
+    - LDKit/FoundationCategory
+  - LDKit/UIKit/MessageBoxView (0.2.12):
+    - LDKit/FoundationCategory
+    - LDKit/UIKitCategory
+  - LDKit/UIKitCategory (0.2.12):
+    - LDKit/Feature/LDKeychain
+    - LDKit/FoundationCategory
+    - LDKit/UIKit/LDLightAlert
+  - LDKWNetworking (0.1.0):
+    - LDKWNetworking/LDKWAPIEncypt (= 0.1.0)
+    - LDNetworking (~> 0.0.5)
+  - LDKWNetworking/LDKWAPIEncypt (0.1.0):
+    - LDNetworking (~> 0.0.5)
+  - LDKWUserCenter (0.1.2):
+    - LDKit (~> 0.2.5)
+  - LDKWWebViewController (0.1.1):
+    - LDKit
+    - LDKWWebViewController/JsBridge (= 0.1.1)
+    - LDWebViewProgress
+  - LDKWWebViewController/JsBridge (0.1.1):
+    - LDKit
+    - LDWebViewProgress
+  - LDNetworking (0.0.10):
+    - AFNetworking (~> 3.1.0)
+  - LDPopupController (0.1.6)
+  - LDPositioning (0.1.1)
+  - LDRoutes (0.0.1):
+    - JLRoutes (~> 1.5.1)
+  - LDWebViewProgress (0.1.2)
+  - Masonry (1.1.0)
+  - MJRefresh (3.1.15.1)
+  - MKAdditions (0.1.4)
+  - ProtocolBuffers (1.9.11)
+  - Reachability (3.2)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
+  - SVProgressHUD (2.2.2)
+  - TTTAttributedLabel (1.13.4)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - KMNavigationBarTransition (~> 1.1.1)
+  - LDEventCollection (~> 0.3.2)
+  - LDKit (~> 0.2.5)
+  - LDKWNetworking (~> 0.1.0)
+  - LDKWUserCenter (from `https://git.ms.netease.com/PettyLoan/LDKWUserCenter.git`, branch `master`)
+  - LDKWWebViewController (~> 0.1.1)
+  - LDPopupController (~> 0.1.5)
+  - LDRoutes (= 0.0.1)
+  - Masonry (~> 1.1.0)
+  - MJRefresh (~> 3.1.12)
+  - MKAdditions (~> 0.1.4)
+  - Reachability (~> 3.2)
+  - SDWebImage (~> 4.1.0)
+  - SVProgressHUD (~> 2.2)
+  - TTTAttributedLabel (= 1.13.4)
+  - YYModel (~> 1.0.4)
+
+EXTERNAL SOURCES:
+  LDKWUserCenter:
+    :branch: master
+    :git: https://git.ms.netease.com/PettyLoan/LDKWUserCenter.git
+
+CHECKOUT OPTIONS:
+  LDKWUserCenter:
+    :commit: dece6852905c7c5e8914a864f88e0d3283ed6126
+    :git: https://git.ms.netease.com/PettyLoan/LDKWUserCenter.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
+  JLRoutes: d191a496b820f60d70225202d04289582da962df
+  KMNavigationBarTransition: 7a52c9bc25b39b6e3343e980b453facee1591b82
+  LDEventCollection: e1fbe430d684512b07b89d09c39b4bf8ec5b40a0
+  LDKit: 75ce650f8abb4ce68fcb0913c370e3e6fab1acd6
+  LDKWNetworking: cab24301b812ee13e534ae30ab389b2d378846d3
+  LDKWUserCenter: dd593ec6ccf129c110d13ba5a6b0d1730d7e3ab8
+  LDKWWebViewController: 717021665900b05fbda0914a60a6f029fe2a54cb
+  LDNetworking: 30e84774b5a5498bca15e948cd6eac905b55a5ca
+  LDPopupController: 7478b64555d87273ed88b423e0acb6fece685173
+  LDPositioning: b01c068a257364c856c3b3e01e40e0d5e3642633
+  LDRoutes: 23b65aff3726f4e9d9c46a6955ee2f88690cb7cb
+  LDWebViewProgress: 9b06b68b4395e77a4abf781c0b2728b0c2d4be2e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  MKAdditions: 1337604aa42a0fd4c8104eb08b500a76c8677ce7
+  ProtocolBuffers: d509225eb2ea43d9582a59e94348fcf86e2abd65
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 84cb3eb86ec59e09c10eb62b131d63942b560c53
+
+COCOAPODS: 1.3.0.beta.2

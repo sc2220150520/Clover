@@ -1,0 +1,890 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		238D791F1FECDB090053BB89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D791E1FECDB090053BB89 /* AppDelegate.m */; };
+		238D79221FECDB090053BB89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D79211FECDB090053BB89 /* ViewController.m */; };
+		238D79251FECDB090053BB89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238D79231FECDB090053BB89 /* Main.storyboard */; };
+		238D79271FECDB090053BB89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238D79261FECDB090053BB89 /* Assets.xcassets */; };
+		238D792A1FECDB090053BB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238D79281FECDB090053BB89 /* LaunchScreen.storyboard */; };
+		238D792D1FECDB090053BB89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D792C1FECDB090053BB89 /* main.m */; };
+		238D79371FECDB090053BB89 /* CloverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D79361FECDB090053BB89 /* CloverTests.m */; };
+		238D79421FECDB090053BB89 /* CloverUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D79411FECDB090053BB89 /* CloverUITests.m */; };
+		238D79511FECDFC80053BB89 /* COUserInforView.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D79501FECDFC80053BB89 /* COUserInforView.m */; };
+		238D79551FF0EA850053BB89 /* COSetUpTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D79541FF0EA850053BB89 /* COSetUpTableViewCell.m */; };
+		238D79581FF100920053BB89 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D79571FF100920053BB89 /* UserInfoModel.m */; };
+		238D795B1FF101870053BB89 /* COSetupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D795A1FF101870053BB89 /* COSetupModel.m */; };
+		23E78CB61FF4946A001868D5 /* KWAddressDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E78CB51FF4946A001868D5 /* KWAddressDatabaseService.m */; };
+		23E78CB91FF49481001868D5 /* KWAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E78CB81FF49481001868D5 /* KWAreaPickerView.m */; };
+		23E78CBD1FF4C365001868D5 /* CLVAddPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E78CBC1FF4C365001868D5 /* CLVAddPhotoTableViewCell.m */; };
+		23E78CC01FF4C978001868D5 /* CLVAddPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E78CBF1FF4C978001868D5 /* CLVAddPhotoView.m */; };
+		23E78CC31FF4D794001868D5 /* CLVEditUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E78CC21FF4D794001868D5 /* CLVEditUserInfoViewController.m */; };
+		23F09B541FF233070098560F /* CLVOftenPlayedGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F09B531FF233070098560F /* CLVOftenPlayedGameView.m */; };
+		23F09B571FF242920098560F /* CLVOfenPlayedBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F09B561FF242920098560F /* CLVOfenPlayedBottomView.m */; };
+		23F09B5A1FF24D8B0098560F /* CLVOfenPlayedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F09B591FF24D8B0098560F /* CLVOfenPlayedViewController.m */; };
+		23F489471FF3720900805245 /* Group 5 Copy 10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F489461FF3720900805245 /* Group 5 Copy 10@2x.png */; };
+		23F4894C1FF3830300805245 /* CLVInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F4894B1FF3830300805245 /* CLVInfoTableViewCell.m */; };
+		23F4894F1FF3A08A00805245 /* UIButton+CLVCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F4894E1FF3A08A00805245 /* UIButton+CLVCustom.m */; };
+		94F57869C1C4C75AD8B7F9F1 /* libPods-CloverUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA87E3ECF7A2463C9788AAC /* libPods-CloverUITests.a */; };
+		D7376EC3EDB6383605C3627F /* libPods-Clover.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CC942E2C203D8AF0A0F1EF /* libPods-Clover.a */; };
+		EC239D438476E6F4C5C63470 /* libPods-CloverTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFAFF6F7A81C76EF3B55750 /* libPods-CloverTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		238D79331FECDB090053BB89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238D79121FECDB090053BB89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238D79191FECDB090053BB89;
+			remoteInfo = Clover;
+		};
+		238D793E1FECDB090053BB89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238D79121FECDB090053BB89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238D79191FECDB090053BB89;
+			remoteInfo = Clover;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FA87E3ECF7A2463C9788AAC /* libPods-CloverUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloverUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CC942E2C203D8AF0A0F1EF /* libPods-Clover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Clover.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238D791A1FECDB090053BB89 /* Clover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clover.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		238D791D1FECDB090053BB89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		238D791E1FECDB090053BB89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		238D79201FECDB090053BB89 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		238D79211FECDB090053BB89 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		238D79241FECDB090053BB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		238D79261FECDB090053BB89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		238D79291FECDB090053BB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		238D792B1FECDB090053BB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238D792C1FECDB090053BB89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		238D79321FECDB090053BB89 /* CloverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		238D79361FECDB090053BB89 /* CloverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloverTests.m; sourceTree = "<group>"; };
+		238D79381FECDB090053BB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238D793D1FECDB090053BB89 /* CloverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		238D79411FECDB090053BB89 /* CloverUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloverUITests.m; sourceTree = "<group>"; };
+		238D79431FECDB090053BB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238D794F1FECDFC80053BB89 /* COUserInforView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COUserInforView.h; sourceTree = "<group>"; };
+		238D79501FECDFC80053BB89 /* COUserInforView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COUserInforView.m; sourceTree = "<group>"; };
+		238D79521FF0CF5C0053BB89 /* CloverPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloverPrefixHeader.pch; sourceTree = "<group>"; };
+		238D79531FF0EA850053BB89 /* COSetUpTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COSetUpTableViewCell.h; sourceTree = "<group>"; };
+		238D79541FF0EA850053BB89 /* COSetUpTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COSetUpTableViewCell.m; sourceTree = "<group>"; };
+		238D79561FF100920053BB89 /* UserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		238D79571FF100920053BB89 /* UserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		238D79591FF101870053BB89 /* COSetupModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COSetupModel.h; sourceTree = "<group>"; };
+		238D795A1FF101870053BB89 /* COSetupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COSetupModel.m; sourceTree = "<group>"; };
+		23E78CB41FF49456001868D5 /* KWAddressDatabaseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWAddressDatabaseService.h; sourceTree = "<group>"; };
+		23E78CB51FF4946A001868D5 /* KWAddressDatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWAddressDatabaseService.m; sourceTree = "<group>"; };
+		23E78CB71FF49479001868D5 /* KWAreaPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWAreaPickerView.h; sourceTree = "<group>"; };
+		23E78CB81FF49481001868D5 /* KWAreaPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWAreaPickerView.m; sourceTree = "<group>"; };
+		23E78CBA1FF49491001868D5 /* kiwi_areas.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = kiwi_areas.db; sourceTree = "<group>"; };
+		23E78CBB1FF4C365001868D5 /* CLVAddPhotoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVAddPhotoTableViewCell.h; sourceTree = "<group>"; };
+		23E78CBC1FF4C365001868D5 /* CLVAddPhotoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVAddPhotoTableViewCell.m; sourceTree = "<group>"; };
+		23E78CBE1FF4C978001868D5 /* CLVAddPhotoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVAddPhotoView.h; sourceTree = "<group>"; };
+		23E78CBF1FF4C978001868D5 /* CLVAddPhotoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVAddPhotoView.m; sourceTree = "<group>"; };
+		23E78CC11FF4D794001868D5 /* CLVEditUserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVEditUserInfoViewController.h; sourceTree = "<group>"; };
+		23E78CC21FF4D794001868D5 /* CLVEditUserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVEditUserInfoViewController.m; sourceTree = "<group>"; };
+		23F09B521FF233070098560F /* CLVOftenPlayedGameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVOftenPlayedGameView.h; sourceTree = "<group>"; };
+		23F09B531FF233070098560F /* CLVOftenPlayedGameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVOftenPlayedGameView.m; sourceTree = "<group>"; };
+		23F09B551FF242920098560F /* CLVOfenPlayedBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVOfenPlayedBottomView.h; sourceTree = "<group>"; };
+		23F09B561FF242920098560F /* CLVOfenPlayedBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVOfenPlayedBottomView.m; sourceTree = "<group>"; };
+		23F09B581FF24D8B0098560F /* CLVOfenPlayedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVOfenPlayedViewController.h; sourceTree = "<group>"; };
+		23F09B591FF24D8B0098560F /* CLVOfenPlayedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVOfenPlayedViewController.m; sourceTree = "<group>"; };
+		23F489461FF3720900805245 /* Group 5 Copy 10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 5 Copy 10@2x.png"; sourceTree = "<group>"; };
+		23F4894A1FF3830300805245 /* CLVInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVInfoTableViewCell.h; sourceTree = "<group>"; };
+		23F4894B1FF3830300805245 /* CLVInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVInfoTableViewCell.m; sourceTree = "<group>"; };
+		23F4894D1FF3A08A00805245 /* UIButton+CLVCustom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CLVCustom.h"; sourceTree = "<group>"; };
+		23F4894E1FF3A08A00805245 /* UIButton+CLVCustom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CLVCustom.m"; sourceTree = "<group>"; };
+		2406C9EA144E99434BBEFD85 /* Pods-CloverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloverUITests/Pods-CloverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3DC93F06B35B9F0DA43BF935 /* Pods-CloverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloverUITests/Pods-CloverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BBFAFF6F7A81C76EF3B55750 /* libPods-CloverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C949A871B40611881B009D62 /* Pods-CloverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloverTests/Pods-CloverTests.release.xcconfig"; sourceTree = "<group>"; };
+		D9A41C678E7783BD5BDD6772 /* Pods-Clover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clover.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clover/Pods-Clover.debug.xcconfig"; sourceTree = "<group>"; };
+		F0E3CE6533198895A0CFD9D9 /* Pods-CloverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloverTests/Pods-CloverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB260EB5964C4D6D08DEEB3C /* Pods-Clover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clover.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clover/Pods-Clover.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		238D79171FECDB090053BB89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7376EC3EDB6383605C3627F /* libPods-Clover.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238D792F1FECDB090053BB89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC239D438476E6F4C5C63470 /* libPods-CloverTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238D793A1FECDB090053BB89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94F57869C1C4C75AD8B7F9F1 /* libPods-CloverUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		238D79111FECDB090053BB89 = {
+			isa = PBXGroup;
+			children = (
+				238D791C1FECDB090053BB89 /* Clover */,
+				238D79351FECDB090053BB89 /* CloverTests */,
+				238D79401FECDB090053BB89 /* CloverUITests */,
+				238D791B1FECDB090053BB89 /* Products */,
+				77D9A7F497D80A97225F9F9C /* Pods */,
+				E9C827528473F6E7A9019045 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		238D791B1FECDB090053BB89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				238D791A1FECDB090053BB89 /* Clover.app */,
+				238D79321FECDB090053BB89 /* CloverTests.xctest */,
+				238D793D1FECDB090053BB89 /* CloverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		238D791C1FECDB090053BB89 /* Clover */ = {
+			isa = PBXGroup;
+			children = (
+				23F489481FF37EA000805245 /* EditeUserInfo */,
+				23F489451FF371D900805245 /* Resource */,
+				238D791D1FECDB090053BB89 /* AppDelegate.h */,
+				238D791E1FECDB090053BB89 /* AppDelegate.m */,
+				238D79201FECDB090053BB89 /* ViewController.h */,
+				238D79211FECDB090053BB89 /* ViewController.m */,
+				238D79231FECDB090053BB89 /* Main.storyboard */,
+				238D79261FECDB090053BB89 /* Assets.xcassets */,
+				238D79281FECDB090053BB89 /* LaunchScreen.storyboard */,
+				238D792B1FECDB090053BB89 /* Info.plist */,
+				238D792C1FECDB090053BB89 /* main.m */,
+				238D794F1FECDFC80053BB89 /* COUserInforView.h */,
+				238D79501FECDFC80053BB89 /* COUserInforView.m */,
+				238D79521FF0CF5C0053BB89 /* CloverPrefixHeader.pch */,
+				238D79531FF0EA850053BB89 /* COSetUpTableViewCell.h */,
+				238D79541FF0EA850053BB89 /* COSetUpTableViewCell.m */,
+				238D79561FF100920053BB89 /* UserInfoModel.h */,
+				238D79571FF100920053BB89 /* UserInfoModel.m */,
+				238D79591FF101870053BB89 /* COSetupModel.h */,
+				238D795A1FF101870053BB89 /* COSetupModel.m */,
+				23F09B521FF233070098560F /* CLVOftenPlayedGameView.h */,
+				23F09B531FF233070098560F /* CLVOftenPlayedGameView.m */,
+				23F09B551FF242920098560F /* CLVOfenPlayedBottomView.h */,
+				23F09B561FF242920098560F /* CLVOfenPlayedBottomView.m */,
+				23F09B581FF24D8B0098560F /* CLVOfenPlayedViewController.h */,
+				23F09B591FF24D8B0098560F /* CLVOfenPlayedViewController.m */,
+			);
+			path = Clover;
+			sourceTree = "<group>";
+		};
+		238D79351FECDB090053BB89 /* CloverTests */ = {
+			isa = PBXGroup;
+			children = (
+				238D79361FECDB090053BB89 /* CloverTests.m */,
+				238D79381FECDB090053BB89 /* Info.plist */,
+			);
+			path = CloverTests;
+			sourceTree = "<group>";
+		};
+		238D79401FECDB090053BB89 /* CloverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				238D79411FECDB090053BB89 /* CloverUITests.m */,
+				238D79431FECDB090053BB89 /* Info.plist */,
+			);
+			path = CloverUITests;
+			sourceTree = "<group>";
+		};
+		23E78CB31FF491CB001868D5 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				23E78CB71FF49479001868D5 /* KWAreaPickerView.h */,
+				23E78CB81FF49481001868D5 /* KWAreaPickerView.m */,
+				23E78CB41FF49456001868D5 /* KWAddressDatabaseService.h */,
+				23E78CB51FF4946A001868D5 /* KWAddressDatabaseService.m */,
+				23E78CBA1FF49491001868D5 /* kiwi_areas.db */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		23F489451FF371D900805245 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				23F489461FF3720900805245 /* Group 5 Copy 10@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		23F489481FF37EA000805245 /* EditeUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				23F489491FF37EB300805245 /* view */,
+				23E78CC11FF4D794001868D5 /* CLVEditUserInfoViewController.h */,
+				23E78CC21FF4D794001868D5 /* CLVEditUserInfoViewController.m */,
+			);
+			path = EditeUserInfo;
+			sourceTree = "<group>";
+		};
+		23F489491FF37EB300805245 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				23E78CB31FF491CB001868D5 /* PickerView */,
+				23F4894A1FF3830300805245 /* CLVInfoTableViewCell.h */,
+				23F4894B1FF3830300805245 /* CLVInfoTableViewCell.m */,
+				23F4894D1FF3A08A00805245 /* UIButton+CLVCustom.h */,
+				23F4894E1FF3A08A00805245 /* UIButton+CLVCustom.m */,
+				23E78CBB1FF4C365001868D5 /* CLVAddPhotoTableViewCell.h */,
+				23E78CBC1FF4C365001868D5 /* CLVAddPhotoTableViewCell.m */,
+				23E78CBE1FF4C978001868D5 /* CLVAddPhotoView.h */,
+				23E78CBF1FF4C978001868D5 /* CLVAddPhotoView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		77D9A7F497D80A97225F9F9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9A41C678E7783BD5BDD6772 /* Pods-Clover.debug.xcconfig */,
+				FB260EB5964C4D6D08DEEB3C /* Pods-Clover.release.xcconfig */,
+				F0E3CE6533198895A0CFD9D9 /* Pods-CloverTests.debug.xcconfig */,
+				C949A871B40611881B009D62 /* Pods-CloverTests.release.xcconfig */,
+				2406C9EA144E99434BBEFD85 /* Pods-CloverUITests.debug.xcconfig */,
+				3DC93F06B35B9F0DA43BF935 /* Pods-CloverUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9C827528473F6E7A9019045 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11CC942E2C203D8AF0A0F1EF /* libPods-Clover.a */,
+				BBFAFF6F7A81C76EF3B55750 /* libPods-CloverTests.a */,
+				0FA87E3ECF7A2463C9788AAC /* libPods-CloverUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		238D79191FECDB090053BB89 /* Clover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238D79461FECDB090053BB89 /* Build configuration list for PBXNativeTarget "Clover" */;
+			buildPhases = (
+				EDA216AACCC8A7DCD17EE373 /* [CP] Check Pods Manifest.lock */,
+				238D79161FECDB090053BB89 /* Sources */,
+				238D79171FECDB090053BB89 /* Frameworks */,
+				238D79181FECDB090053BB89 /* Resources */,
+				9BFE2174CA5A40E397782288 /* [CP] Embed Pods Frameworks */,
+				C9308DFFDAF8FC8562F317C1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clover;
+			productName = Clover;
+			productReference = 238D791A1FECDB090053BB89 /* Clover.app */;
+			productType = "com.apple.product-type.application";
+		};
+		238D79311FECDB090053BB89 /* CloverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238D79491FECDB090053BB89 /* Build configuration list for PBXNativeTarget "CloverTests" */;
+			buildPhases = (
+				6F0F75B1F58C2999B3D028D2 /* [CP] Check Pods Manifest.lock */,
+				238D792E1FECDB090053BB89 /* Sources */,
+				238D792F1FECDB090053BB89 /* Frameworks */,
+				238D79301FECDB090053BB89 /* Resources */,
+				BC86E1F6F8CC6549C245CF80 /* [CP] Embed Pods Frameworks */,
+				91A891A4EAD5C78FD50B2D13 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238D79341FECDB090053BB89 /* PBXTargetDependency */,
+			);
+			name = CloverTests;
+			productName = CloverTests;
+			productReference = 238D79321FECDB090053BB89 /* CloverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		238D793C1FECDB090053BB89 /* CloverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238D794C1FECDB090053BB89 /* Build configuration list for PBXNativeTarget "CloverUITests" */;
+			buildPhases = (
+				DB31EB972D948EDAD9A812AA /* [CP] Check Pods Manifest.lock */,
+				238D79391FECDB090053BB89 /* Sources */,
+				238D793A1FECDB090053BB89 /* Frameworks */,
+				238D793B1FECDB090053BB89 /* Resources */,
+				AF8C75588A396978DE68660D /* [CP] Embed Pods Frameworks */,
+				1646A74BCF748788DE420423 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238D793F1FECDB090053BB89 /* PBXTargetDependency */,
+			);
+			name = CloverUITests;
+			productName = CloverUITests;
+			productReference = 238D793D1FECDB090053BB89 /* CloverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		238D79121FECDB090053BB89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CLV;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = shenchen;
+				TargetAttributes = {
+					238D79191FECDB090053BB89 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					238D79311FECDB090053BB89 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 238D79191FECDB090053BB89;
+					};
+					238D793C1FECDB090053BB89 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 238D79191FECDB090053BB89;
+					};
+				};
+			};
+			buildConfigurationList = 238D79151FECDB090053BB89 /* Build configuration list for PBXProject "Clover" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 238D79111FECDB090053BB89;
+			productRefGroup = 238D791B1FECDB090053BB89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				238D79191FECDB090053BB89 /* Clover */,
+				238D79311FECDB090053BB89 /* CloverTests */,
+				238D793C1FECDB090053BB89 /* CloverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		238D79181FECDB090053BB89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238D792A1FECDB090053BB89 /* LaunchScreen.storyboard in Resources */,
+				23F489471FF3720900805245 /* Group 5 Copy 10@2x.png in Resources */,
+				238D79271FECDB090053BB89 /* Assets.xcassets in Resources */,
+				238D79251FECDB090053BB89 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238D79301FECDB090053BB89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238D793B1FECDB090053BB89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1646A74BCF748788DE420423 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloverUITests/Pods-CloverUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F0F75B1F58C2999B3D028D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloverTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91A891A4EAD5C78FD50B2D13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloverTests/Pods-CloverTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BFE2174CA5A40E397782288 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clover/Pods-Clover-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF8C75588A396978DE68660D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloverUITests/Pods-CloverUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC86E1F6F8CC6549C245CF80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CloverTests/Pods-CloverTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9308DFFDAF8FC8562F317C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Clover/Pods-Clover-resources.sh",
+				"${PODS_ROOT}/LDKWWebViewController/LDKWWebViewController/Rescources/LDKWWebViewController.bundle",
+				"${PODS_ROOT}/LDKit/LDKit/UIKit/LDLightAlert/LDLightAlert.xcassets",
+				"${PODS_ROOT}/LDKit/LDKit/UIKit/MessageBoxView/LDMBAssets.xcassets",
+				"${PODS_ROOT}/LDKit/LDKit/Category/UIKit/UIScrollView/LDScrollViewRes.xcassets",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clover/Pods-Clover-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB31EB972D948EDAD9A812AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloverUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDA216AACCC8A7DCD17EE373 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clover-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		238D79161FECDB090053BB89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F09B541FF233070098560F /* CLVOftenPlayedGameView.m in Sources */,
+				23F09B571FF242920098560F /* CLVOfenPlayedBottomView.m in Sources */,
+				238D79551FF0EA850053BB89 /* COSetUpTableViewCell.m in Sources */,
+				238D79221FECDB090053BB89 /* ViewController.m in Sources */,
+				23F4894F1FF3A08A00805245 /* UIButton+CLVCustom.m in Sources */,
+				238D795B1FF101870053BB89 /* COSetupModel.m in Sources */,
+				23F4894C1FF3830300805245 /* CLVInfoTableViewCell.m in Sources */,
+				238D79581FF100920053BB89 /* UserInfoModel.m in Sources */,
+				23E78CBD1FF4C365001868D5 /* CLVAddPhotoTableViewCell.m in Sources */,
+				238D792D1FECDB090053BB89 /* main.m in Sources */,
+				23E78CB91FF49481001868D5 /* KWAreaPickerView.m in Sources */,
+				238D79511FECDFC80053BB89 /* COUserInforView.m in Sources */,
+				23E78CB61FF4946A001868D5 /* KWAddressDatabaseService.m in Sources */,
+				238D791F1FECDB090053BB89 /* AppDelegate.m in Sources */,
+				23F09B5A1FF24D8B0098560F /* CLVOfenPlayedViewController.m in Sources */,
+				23E78CC01FF4C978001868D5 /* CLVAddPhotoView.m in Sources */,
+				23E78CC31FF4D794001868D5 /* CLVEditUserInfoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238D792E1FECDB090053BB89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238D79371FECDB090053BB89 /* CloverTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238D79391FECDB090053BB89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238D79421FECDB090053BB89 /* CloverUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		238D79341FECDB090053BB89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238D79191FECDB090053BB89 /* Clover */;
+			targetProxy = 238D79331FECDB090053BB89 /* PBXContainerItemProxy */;
+		};
+		238D793F1FECDB090053BB89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238D79191FECDB090053BB89 /* Clover */;
+			targetProxy = 238D793E1FECDB090053BB89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		238D79231FECDB090053BB89 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238D79241FECDB090053BB89 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		238D79281FECDB090053BB89 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238D79291FECDB090053BB89 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		238D79441FECDB090053BB89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		238D79451FECDB090053BB89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		238D79471FECDB090053BB89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A41C678E7783BD5BDD6772 /* Pods-Clover.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Clover/CloverPrefixHeader.pch;
+				INFOPLIST_FILE = Clover/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sc.com.Clover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		238D79481FECDB090053BB89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB260EB5964C4D6D08DEEB3C /* Pods-Clover.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Clover/CloverPrefixHeader.pch;
+				INFOPLIST_FILE = Clover/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sc.com.Clover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		238D794A1FECDB090053BB89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E3CE6533198895A0CFD9D9 /* Pods-CloverTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CloverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sc.com.CloverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clover.app/Clover";
+			};
+			name = Debug;
+		};
+		238D794B1FECDB090053BB89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C949A871B40611881B009D62 /* Pods-CloverTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CloverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sc.com.CloverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clover.app/Clover";
+			};
+			name = Release;
+		};
+		238D794D1FECDB090053BB89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2406C9EA144E99434BBEFD85 /* Pods-CloverUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CloverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sc.com.CloverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Clover;
+			};
+			name = Debug;
+		};
+		238D794E1FECDB090053BB89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DC93F06B35B9F0DA43BF935 /* Pods-CloverUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CloverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sc.com.CloverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Clover;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		238D79151FECDB090053BB89 /* Build configuration list for PBXProject "Clover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238D79441FECDB090053BB89 /* Debug */,
+				238D79451FECDB090053BB89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238D79461FECDB090053BB89 /* Build configuration list for PBXNativeTarget "Clover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238D79471FECDB090053BB89 /* Debug */,
+				238D79481FECDB090053BB89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238D79491FECDB090053BB89 /* Build configuration list for PBXNativeTarget "CloverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238D794A1FECDB090053BB89 /* Debug */,
+				238D794B1FECDB090053BB89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238D794C1FECDB090053BB89 /* Build configuration list for PBXNativeTarget "CloverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238D794D1FECDB090053BB89 /* Debug */,
+				238D794E1FECDB090053BB89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 238D79121FECDB090053BB89 /* Project object */;
+}
