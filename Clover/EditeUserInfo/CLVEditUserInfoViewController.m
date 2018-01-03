@@ -11,6 +11,7 @@
 #import "CLVAddPhotoTableViewCell.h"
 #import "CLVInfoTableViewCell.h"
 #import "KWAreaPickerView.h"
+#import "CLVDatePickerView.h"
 
 @interface CLVEditUserInfoViewController ()<UITableViewDelegate, UITableViewDataSource,CLVEditTextCellDelegate,UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -39,6 +40,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHidden:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(areaPickerViewWillShow:) name:KWAreaPickerViewWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(areaPickerViewWillHidden:) name:KWAreaPickerViewWillHiddenNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(datePickerViewWillShow:) name:CLVDatePickerViewWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(datePickerViewWillHidden:) name:CLVDatePickerViewWillHiddenNotification object:nil];
     self.cellNum = [NSMutableArray array];
     self.infoCells = [NSMutableArray array];
     self.phtoCells = [NSMutableArray array];
@@ -297,6 +300,15 @@
     }];
 }
 
+#pragma mark - datePickerViewNotifacation
+- (void)datePickerViewWillShow:(NSNotification *)notification {
+    CGFloat pickerViewHeight = [[[notification userInfo] objectForKey:CLVDatePickerViewFrameEndHeightInfoKey] floatValue];
+    [self pickerViewWillShow:pickerViewHeight];
+}
+
+- (void)datePickerViewWillHidden:(NSNotification *)notification {
+    [self pickerViewWillHidden];
+}
 
 #pragma mark - lazyLoad
 - (UITableView *)tableView {

@@ -10,6 +10,8 @@
 #import <Masonry.h>
 #import "UIButton+CLVCustom.h"
 #import "KWAreaPickerView.h"
+#import "CLVDatePickerView.h"
+#import <NSDate+LDAddition.h>
 
 #pragma mark - 编辑个人信息页的tableViewCell抽象基类
 @interface CLVInfoTableViewCell ()
@@ -38,6 +40,19 @@
 }
 - (void)setContent:(id)model {}
 - (void)didTapped {}
+
+#pragma mark - 获得所在控制器
+- (UIViewController *)viewController {
+    for (UIView *next = self.superview; next; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
+
+#pragma mark lozyLoad
 
 - (UILabel *)theme {
     if (_theme == nil) {
@@ -518,17 +533,6 @@
     [self.areaPicker setAddressWithProvinceId:self.provinceId cityId:self.cityId areaId:self.areaId];
 }
 
-#pragma mark - KWAreaPickerView Notification
-
-- (void)areaPickerViewWillShow:(NSNotification *)notification {
-    //CGFloat pickerViewHeight = [[[notification userInfo] objectForKey:KWAreaPickerViewFrameEndHeightInfoKey] floatValue];
-    //[self pickerViewWillShow:pickerViewHeight];
-}
-
-- (void)areaPickerViewWillHidden:(NSNotification *)notification {
-    //[self pickerViewWillHidden];
-}
-
 #pragma mark - KWAreaPickerViewDelegate
 
 - (void)areaPicker:(KWAreaPickerView *)picker didSelectAddress:(NSString *)addrStr {
@@ -547,39 +551,6 @@
     self.areaId = areaId;
 }
 
-//- (void)pickerViewWillShow:(CGFloat)pickerViewHeight {
-//    self.pickerViewShow = YES;
-//    // pickerViewCell的底边Y值
-//    CGFloat pickerViewCellBottomY = CGRectGetMaxY(self.convertCellRect) + self.pushDistance;
-//    // 键盘的Y值
-//    CGFloat pickerViewTopY = CGRectGetHeight(self.view.bounds) - pickerViewHeight;
-//
-//    if (self.pushDistance == 0) {
-//        self.originalContentOffset = self.tableView.contentOffset;
-//    }
-//    // 如果成立，得到picker将要退出的距离
-//    if (pickerViewTopY < pickerViewCellBottomY) {
-//
-//        CGFloat pickerWillDistance = pickerViewCellBottomY - pickerViewTopY;
-//        CGFloat finalDistance = self.pushDistance - pickerWillDistance;
-//        [UIView animateWithDuration:0.25 animations:^{
-//            self.tableView.contentOffset = CGPointMake(0, self.tableView.contentOffset.y - finalDistance);
-//        }];
-//    } else {
-//        [UIView animateWithDuration:0.25 animations:^{
-//            self.tableView.contentOffset = self.originalContentOffset;
-//        }];
-//    }
-//}
-
-//- (void)pickerViewWillHidden {
-//    self.pickerViewShow = NO;
-//    [UIView animateWithDuration:0.25 animations:^{
-//        self.pushDistance = 0;
-//        self.tableView.contentOffset = self.originalContentOffset;
-//    }];
-//}
-
 #pragma mark lazyLoad
 - (UILabel *)addressLabel {
     if (_addressLabel == nil) {
@@ -588,23 +559,16 @@
     return _addressLabel;
 }
 
-#pragma mark - 获得所在控制器
-- (UIViewController *)viewController {
-    for (UIView *next = self.superview; next; next = next.superview) {
-        UIResponder *nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController *)nextResponder;
-        }
-    }
-    return nil;
-}
-
 @end
 
 #pragma mark - 编辑年龄的cell
-@interface CLVEditAgeTableViewCell()
+@interface CLVEditAgeTableViewCell() <CLVDatePickerViewDelegate>
 
 @property (nonatomic, strong) UILabel *ageLabel;
+@property (nonatomic, strong) CLVDatePickerView *datePickerView;
+@property (nonatomic, copy) NSString *year;
+@property (nonatomic, copy) NSString *month;
+@property (nonatomic, copy) NSString *day;
 
 @end
 
@@ -650,6 +614,58 @@
     self.ageLabel.text = str;
 }
 
+- (void)didTapped {
+    [self.datePickerView removeFromSuperview];
+    self.datePickerView = [[CLVDatePickerView alloc] initWithFrame:[self viewController].view.bounds];
+    self.datePickerView.delegate = self;
+    [self.datePickerView addToView:[self viewController].view animated:YES];
+    [self.datePickerView setDateWithYear:self.year Month:self.month Day:self.day];
+}
+
+#pragma mark calcu age
+- (NSInteger)ageWithDateOfBirth:(NSDate *)date;
+{
+    // 出生日期转换 年月日
+    NSDateComponents *components1 = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date];
+    NSInteger brithDateYear  = [components1 year];
+    NSInteger brithDateDay   = [components1 day];
+    NSInteger brithDateMonth = [components1 month];
+    
+    // 获取系统当前 年月日
+    NSDateComponents *components2 = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    NSInteger currentDateYear  = [components2 year];
+    NSInteger currentDateDay   = [components2 day];
+    NSInteger currentDateMonth = [components2 month];
+    
+    // 计算年龄
+    NSInteger iAge = currentDateYear - brithDateYear - 1;
+    if ((currentDateMonth > brithDateMonth) || (currentDateMonth == brithDateMonth && currentDateDay >= brithDateDay)) {
+        iAge++;
+    }
+    
+    return iAge;
+}
+
+#pragma mark datePickerViewDelegate
+- (void)datePicker:(CLVDatePickerView *)picker didSelectDate:(NSString *)dateStr {
+    NSDate *start = [NSDate ld_dateWithString:dateStr dateFormat:@"yyyy-MM-dd"];
+    NSInteger age = [self ageWithDateOfBirth:start];
+    [self.ageLabel setText:[NSString stringWithFormat:@"%ld",age]];
+}
+
+- (void)datePicker:(CLVDatePickerView *)picker cancelWithOriginalDate:(NSString *)dateStr {
+    NSDate *start = [NSDate ld_dateWithString:dateStr dateFormat:@"YY-MM-DD"];
+    NSInteger age = [self ageWithDateOfBirth:start];
+    [self.ageLabel setText:[NSString stringWithFormat:@"%ld",age]];
+}
+
+- (void)datePicker:(CLVDatePickerView *)picker confirmWithYear:(NSString *)Year
+             Month:(NSString *)Month
+               Day:(nullable NSString *)Day {
+    self.year = Year;
+    self.month = Month;
+    self.day = Day;
+}
 
 #pragma mark lazyLoad
 - (UILabel *)ageLabel {

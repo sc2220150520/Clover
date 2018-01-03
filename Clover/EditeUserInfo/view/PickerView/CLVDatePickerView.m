@@ -93,7 +93,7 @@ static const NSInteger cPickerViewComponentNum = 3;
         [self.picker reloadAllComponents];
         return;
     }
-    [self setDateWithYear:Year Month:Month Day:Day];
+    [self setDayInfoWithYear:Year month:Month];
     
     [self.picker reloadAllComponents];
     self.yearIdx = [self.years indexOfObject:Year];
@@ -125,7 +125,7 @@ static const NSInteger cPickerViewComponentNum = 3;
     if (self.dayIdx     < self.days.count) {
         [dateInfo addObject:self.days[self.dayIdx]];
     }
-    return [dateInfo componentsJoinedByString:@""];
+    return [dateInfo componentsJoinedByString:@"-"];
 }
 
 - (void)addToView:(UIView *)view animated:(BOOL)animated {
@@ -233,7 +233,7 @@ static const NSInteger cPickerViewComponentNum = 3;
     if (component == 0) {
         NSString *year = self.years[row];
         [self setMonthInfoWithYear:year];
-        [self setDayInfoWithYear:year month:self.years.firstObject];
+        [self setDayInfoWithYear:year month:self.months.firstObject];
         self.yearIdx = row;
         self.monthIdx = self.dayIdx = 0;
     } else if (component == 1) {
