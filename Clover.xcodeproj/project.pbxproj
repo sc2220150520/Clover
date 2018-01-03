@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23077E0B1FFB28AB0078A917 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23077E0A1FFB28AB0078A917 /* libsqlite3.0.tbd */; };
+		23077E0C1FFB2A7C0078A917 /* kiwi_areas.db in Resources */ = {isa = PBXBuildFile; fileRef = 23E78CBA1FF49491001868D5 /* kiwi_areas.db */; };
+		23077E171FFB93B20078A917 /* CLVDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23077E161FFB93B20078A917 /* CLVDatePickerView.m */; };
+		23077E1A1FFBAA800078A917 /* CLVDateDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23077E191FFBAA800078A917 /* CLVDateDatabaseService.m */; };
 		238D791F1FECDB090053BB89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D791E1FECDB090053BB89 /* AppDelegate.m */; };
 		238D79221FECDB090053BB89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238D79211FECDB090053BB89 /* ViewController.m */; };
 		238D79251FECDB090053BB89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238D79231FECDB090053BB89 /* Main.storyboard */; };
@@ -55,6 +59,11 @@
 /* Begin PBXFileReference section */
 		0FA87E3ECF7A2463C9788AAC /* libPods-CloverUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloverUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CC942E2C203D8AF0A0F1EF /* libPods-Clover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Clover.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23077E0A1FFB28AB0078A917 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		23077E151FFB93B20078A917 /* CLVDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVDatePickerView.h; sourceTree = "<group>"; };
+		23077E161FFB93B20078A917 /* CLVDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVDatePickerView.m; sourceTree = "<group>"; };
+		23077E181FFBAA800078A917 /* CLVDateDatabaseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVDateDatabaseService.h; sourceTree = "<group>"; };
+		23077E191FFBAA800078A917 /* CLVDateDatabaseService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVDateDatabaseService.m; sourceTree = "<group>"; };
 		238D791A1FECDB090053BB89 /* Clover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238D791D1FECDB090053BB89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		238D791E1FECDB090053BB89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23077E0B1FFB28AB0078A917 /* libsqlite3.0.tbd in Frameworks */,
 				D7376EC3EDB6383605C3627F /* libPods-Clover.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +230,10 @@
 				23E78CB41FF49456001868D5 /* KWAddressDatabaseService.h */,
 				23E78CB51FF4946A001868D5 /* KWAddressDatabaseService.m */,
 				23E78CBA1FF49491001868D5 /* kiwi_areas.db */,
+				23077E151FFB93B20078A917 /* CLVDatePickerView.h */,
+				23077E161FFB93B20078A917 /* CLVDatePickerView.m */,
+				23077E181FFBAA800078A917 /* CLVDateDatabaseService.h */,
+				23077E191FFBAA800078A917 /* CLVDateDatabaseService.m */,
 			);
 			path = PickerView;
 			sourceTree = "<group>";
@@ -274,6 +288,7 @@
 		E9C827528473F6E7A9019045 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23077E0A1FFB28AB0078A917 /* libsqlite3.0.tbd */,
 				11CC942E2C203D8AF0A0F1EF /* libPods-Clover.a */,
 				BBFAFF6F7A81C76EF3B55750 /* libPods-CloverTests.a */,
 				0FA87E3ECF7A2463C9788AAC /* libPods-CloverUITests.a */,
@@ -397,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23077E0C1FFB2A7C0078A917 /* kiwi_areas.db in Resources */,
 				238D792A1FECDB090053BB89 /* LaunchScreen.storyboard in Resources */,
 				23F489471FF3720900805245 /* Group 5 Copy 10@2x.png in Resources */,
 				238D79271FECDB090053BB89 /* Assets.xcassets in Resources */,
@@ -582,6 +598,7 @@
 			files = (
 				23F09B541FF233070098560F /* CLVOftenPlayedGameView.m in Sources */,
 				23F09B571FF242920098560F /* CLVOfenPlayedBottomView.m in Sources */,
+				23077E171FFB93B20078A917 /* CLVDatePickerView.m in Sources */,
 				238D79551FF0EA850053BB89 /* COSetUpTableViewCell.m in Sources */,
 				238D79221FECDB090053BB89 /* ViewController.m in Sources */,
 				23F4894F1FF3A08A00805245 /* UIButton+CLVCustom.m in Sources */,
@@ -591,6 +608,7 @@
 				23E78CBD1FF4C365001868D5 /* CLVAddPhotoTableViewCell.m in Sources */,
 				238D792D1FECDB090053BB89 /* main.m in Sources */,
 				23E78CB91FF49481001868D5 /* KWAreaPickerView.m in Sources */,
+				23077E1A1FFBAA800078A917 /* CLVDateDatabaseService.m in Sources */,
 				238D79511FECDFC80053BB89 /* COUserInforView.m in Sources */,
 				23E78CB61FF4946A001868D5 /* KWAddressDatabaseService.m in Sources */,
 				238D791F1FECDB090053BB89 /* AppDelegate.m in Sources */,
@@ -761,6 +779,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JF446YJ3Q;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Clover/CloverPrefixHeader.pch;
 				INFOPLIST_FILE = Clover/Info.plist;
@@ -777,6 +796,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JF446YJ3Q;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Clover/CloverPrefixHeader.pch;
 				INFOPLIST_FILE = Clover/Info.plist;

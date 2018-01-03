@@ -129,6 +129,7 @@
 }
 
 - (void)setStyle {
+    self.backgroundColor = [UIColor whiteColor];
     self.nameLabel.font = [UIFont ld_defaultFontOfSize:15];
     self.nameLabel.textColor = [UIColor ld_colorWithHex:0x666666];
     self.sexLabel.font = [UIFont ld_defaultFontOfSize:12];
@@ -356,7 +357,7 @@
     self.nameLabel.textColor = [UIColor ld_colorWithHex:0x333333];
     self.descLabel.font = [UIFont ld_defaultFontOfSize:14];
     self.descLabel.textColor = [UIColor ld_colorWithHex:0x999999];
-    self.headImageView.backgroundColor = [UIColor darkGrayColor];
+    self.headImageView.backgroundColor = [UIColor blueColor];
     self.carouselFigure.backgroundColor = [UIColor orangeColor];
 }
 

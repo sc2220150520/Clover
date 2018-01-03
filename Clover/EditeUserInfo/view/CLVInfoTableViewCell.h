@@ -25,8 +25,28 @@
 @end
 
 #pragma mark - 编辑昵称或者个性签名类型的cell
+
+@protocol CLVEditTextCellDelegate;
 @interface CLVEditTextTableViewCell : CLVInfoTableViewCell
+
+@property (nonatomic, weak) id<CLVEditTextCellDelegate> delegate;
+@property (nonatomic, assign) NSUInteger characterCount;
+- (void)setTextFieldUserInteractionDisabled;
+- (void)setKeyboardType:(UIKeyboardType)keyboardType;
+- (void)setTextFieldTextColor:(UIColor *)color;
+
 @end
+
+@protocol CLVEditTextCellDelegate<NSObject>
+@optional
+
+- (void)editTextFieldCellTextChanged:(CLVEditTextTableViewCell *)editTextFieldCell;
+- (void)editTextFieldCellShouldBeginEditing:(CLVEditTextTableViewCell *)editTextFieldCell;
+- (void)editTextFieldCellShouldEndEditing:(CLVEditTextTableViewCell *)editTextFieldCell;
+
+@end
+
+
 
 #pragma mark - 编辑性别的cell
 @interface CLVEditButtonTableViewCell : CLVInfoTableViewCell

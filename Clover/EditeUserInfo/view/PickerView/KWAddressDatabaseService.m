@@ -24,6 +24,7 @@
     if (self) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"kiwi_areas"
                                                          ofType:@"db"];
+        //NSLog(@"%d",sqlite3_open([path UTF8String], &areasDB));
         if (sqlite3_open([path UTF8String], &areasDB) != SQLITE_OK) {
             sqlite3_close(areasDB);
             return nil;
