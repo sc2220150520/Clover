@@ -12,8 +12,12 @@
 #import "CLVInfoTableViewCell.h"
 #import "KWAreaPickerView.h"
 #import "CLVDatePickerView.h"
+#import "CLVFloatLayerView.h"
+#import "CLVFloatLayerDataSource.h"
+#import "CLVFLoatViewConstans.h"
+#import <Photos/Photos.h>
 
-@interface CLVEditUserInfoViewController ()<UITableViewDelegate, UITableViewDataSource,CLVEditTextCellDelegate,UIGestureRecognizerDelegate>
+@interface CLVEditUserInfoViewController ()<UITableViewDelegate, UITableViewDataSource,CLVEditTextCellDelegate,UIGestureRecognizerDelegate,CLVFloatLayerDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *cellNum;
 @property (nonatomic, strong) NSMutableArray *phtoCells;
@@ -24,6 +28,12 @@
 @property (nonatomic, assign) CGFloat pushDistance;
 @property (nonatomic, assign) CGFloat beyondTableViewDistance;
 @property (nonatomic, assign) BOOL pickerViewShow;
+//浮层数据源
+@property (nonatomic, strong) CLVFloatLayerDataSource *floatViewData;
+@property (nonatomic, strong) CLVFloatLayerView *floatView;
+//当前为为ImageView选择图片
+@property (nonatomic, strong) UIImageView *currentImageView;
+
 @end
 
 @implementation CLVEditUserInfoViewController
@@ -47,6 +57,25 @@
     self.phtoCells = [NSMutableArray array];
     [self setupView];
     [self createCell];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        switch (status) {
+            case PHAuthorizationStatusAuthorized:
+                NSLog(@"PHAuthorizationStatusAuthorized");
+                break;
+            case PHAuthorizationStatusDenied:
+                NSLog(@"PHAuthorizationStatusDenied");
+                break;
+            case PHAuthorizationStatusNotDetermined:
+                NSLog(@"PHAuthorizationStatusNotDetermined");
+                break;
+            case PHAuthorizationStatusRestricted:
+                NSLog(@"PHAuthorizationStatusRestricted");
+                break;
+        }
+    }];
 }
 
 - (void)setupView
@@ -216,6 +245,61 @@
     }
 }
 
+#pragma mark - CLVFloatLayerViewDelegate
+- (void)onHide {
+    
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+// 完成图片的选取后调用的方法
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+        [picker dismissViewControllerAnimated:YES completion:^{
+                    /* 此处参数 info 是一个字典，下面是字典中的键值 （从相机获取的图片和相册获取的图片时，两者的info值不尽相同）
+                     * UIImagePickerControllerMediaType; // 媒体类型
+                     * UIImagePickerControllerOriginalImage; // 原始图片
+                     * UIImagePickerControllerEditedImage; // 裁剪后图片
+                     * UIImagePickerControllerCropRect; // 图片裁剪区域（CGRect）
+                     * UIImagePickerControllerMediaURL; // 媒体的URL
+                     * UIImagePickerControllerReferenceURL // 原件的URL
+                     * UIImagePickerControllerMediaMetadata // 当数据来源是相机时，此值才有效
+                     */
+                    UIImage *image = nil;
+                    if (picker.allowsEditing) {
+                        image = [info objectForKey:UIImagePickerControllerEditedImage];
+                        if (image == nil) {
+                            image = [info objectForKey:UIImagePickerControllerOriginalImage];
+                        }
+                    } else {
+                        image = [info objectForKey:UIImagePickerControllerOriginalImage];
+                    }
+            
+                    self.currentImageView.image = image;
+                    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+                        // 将图像保存到相册（第三个参数需要传入上面格式的选择器对象）
+                        SEL selectorToCall = @selector(image:didFinishSavingWithError:contextInfo:);
+                        UIImageWriteToSavedPhotosAlbum(image, self, selectorToCall, NULL);
+                    }
+                    [self.floatView hide];
+        }];
+}
+
+// 取消选取调用的方法
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:^(){
+        
+    }];
+    [self.floatView hide];
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (error == nil){
+        NSLog(@"Image was saved successfully.");
+    } else {
+        NSLog(@"An error happened while saving the image.");
+        NSLog(@"Error = %@", error);
+    }
+}
+
 
 #pragma mark - Keyboard notification
 
@@ -310,6 +394,39 @@
     [self pickerViewWillHidden];
 }
 
+#pragma mark - showFloatlayerView
+- (void)showFloatLayerView:(id)sender {
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:[NSNumber numberWithInteger:CLVTakePhoto],[NSNumber numberWithInteger: CLVChoosePhoto],[NSNumber numberWithInteger: CLVCancel],nil];
+    CGFloat height = (array.count - 1) * cellGapHeigh + array.count * cellHeight +tableViewHeadHeigh + tableViewFooterHeigh;
+    self.floatViewData = [[CLVFloatLayerDataSource alloc] initWithModel:array];
+    self.floatView = [[CLVFloatLayerView alloc] initWithFrame:self.view.bounds tableViewHeight:height];
+    [self.floatViewData setUpTableViewDataSource:self.floatView.tableView];
+    [self.floatView showInParentView:self.view];
+    self.floatView.delegate = self;
+    self.currentImageView = (UIImageView *)sender;
+}
+
+#pragma mark - Aboutphoto
+- (void)takePhoto:(id)sender {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.delegate = self;
+    imagePickerController.allowsEditing = YES;
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePickerController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    [self presentViewController:imagePickerController animated:YES completion:^{
+        
+    }];
+}
+
+- (void)choosePhoto:(id)sender {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.delegate = self;
+    imagePickerController.allowsEditing = YES;
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imagePickerController animated:YES completion:^{
+        
+    }];
+}
 #pragma mark - lazyLoad
 - (UITableView *)tableView {
     if (_tableView == nil) {

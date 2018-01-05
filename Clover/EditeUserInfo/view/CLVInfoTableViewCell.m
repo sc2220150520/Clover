@@ -132,7 +132,9 @@
 }
 
 - (void)didTapped {
-    
+    if ([[self viewController] respondsToSelector:@selector(showFloatLayerView:)]) {
+        [[self viewController] performSelector:@selector(showFloatLayerView:) withObject:self.myImageView];
+    }
 }
 #pragma mark lozy load
 - (UIImageView *)myImageView {

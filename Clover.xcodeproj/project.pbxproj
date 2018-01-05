@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2306184C1FFDC7C900A79976 /* CLVFloatLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2306184B1FFDC7C900A79976 /* CLVFloatLayerView.m */; };
+		230618501FFDCC9600A79976 /* CLVFLoatViewConstans.m in Sources */ = {isa = PBXBuildFile; fileRef = 2306184F1FFDCC9600A79976 /* CLVFLoatViewConstans.m */; };
+		230618541FFDD53B00A79976 /* CLVFloatLayerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 230618531FFDD53B00A79976 /* CLVFloatLayerDataSource.m */; };
+		230618571FFE132200A79976 /* CLVFloatLayerTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 230618561FFE132200A79976 /* CLVFloatLayerTableCell.m */; };
 		23077E0B1FFB28AB0078A917 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23077E0A1FFB28AB0078A917 /* libsqlite3.0.tbd */; };
 		23077E0C1FFB2A7C0078A917 /* kiwi_areas.db in Resources */ = {isa = PBXBuildFile; fileRef = 23E78CBA1FF49491001868D5 /* kiwi_areas.db */; };
 		23077E171FFB93B20078A917 /* CLVDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23077E161FFB93B20078A917 /* CLVDatePickerView.m */; };
@@ -59,6 +63,14 @@
 /* Begin PBXFileReference section */
 		0FA87E3ECF7A2463C9788AAC /* libPods-CloverUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloverUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CC942E2C203D8AF0A0F1EF /* libPods-Clover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Clover.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2306184A1FFDC7C900A79976 /* CLVFloatLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVFloatLayerView.h; sourceTree = "<group>"; };
+		2306184B1FFDC7C900A79976 /* CLVFloatLayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVFloatLayerView.m; sourceTree = "<group>"; };
+		2306184E1FFDCC9600A79976 /* CLVFLoatViewConstans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVFLoatViewConstans.h; sourceTree = "<group>"; };
+		2306184F1FFDCC9600A79976 /* CLVFLoatViewConstans.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVFLoatViewConstans.m; sourceTree = "<group>"; };
+		230618521FFDD53B00A79976 /* CLVFloatLayerDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVFloatLayerDataSource.h; sourceTree = "<group>"; };
+		230618531FFDD53B00A79976 /* CLVFloatLayerDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVFloatLayerDataSource.m; sourceTree = "<group>"; };
+		230618551FFE132200A79976 /* CLVFloatLayerTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVFloatLayerTableCell.h; sourceTree = "<group>"; };
+		230618561FFE132200A79976 /* CLVFloatLayerTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVFloatLayerTableCell.m; sourceTree = "<group>"; };
 		23077E0A1FFB28AB0078A917 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		23077E151FFB93B20078A917 /* CLVDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVDatePickerView.h; sourceTree = "<group>"; };
 		23077E161FFB93B20078A917 /* CLVDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLVDatePickerView.m; sourceTree = "<group>"; };
@@ -149,6 +161,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2306184D1FFDC7F800A79976 /* FloatLayerView */ = {
+			isa = PBXGroup;
+			children = (
+				2306184A1FFDC7C900A79976 /* CLVFloatLayerView.h */,
+				2306184B1FFDC7C900A79976 /* CLVFloatLayerView.m */,
+				2306184E1FFDCC9600A79976 /* CLVFLoatViewConstans.h */,
+				2306184F1FFDCC9600A79976 /* CLVFLoatViewConstans.m */,
+				230618551FFE132200A79976 /* CLVFloatLayerTableCell.h */,
+				230618561FFE132200A79976 /* CLVFloatLayerTableCell.m */,
+			);
+			path = FloatLayerView;
+			sourceTree = "<group>";
+		};
+		230618511FFDD51C00A79976 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				230618521FFDD53B00A79976 /* CLVFloatLayerDataSource.h */,
+				230618531FFDD53B00A79976 /* CLVFloatLayerDataSource.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		238D79111FECDB090053BB89 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +283,7 @@
 		23F489481FF37EA000805245 /* EditeUserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				230618511FFDD51C00A79976 /* model */,
 				23F489491FF37EB300805245 /* view */,
 				23E78CC11FF4D794001868D5 /* CLVEditUserInfoViewController.h */,
 				23E78CC21FF4D794001868D5 /* CLVEditUserInfoViewController.m */,
@@ -259,6 +294,7 @@
 		23F489491FF37EB300805245 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				2306184D1FFDC7F800A79976 /* FloatLayerView */,
 				23E78CB31FF491CB001868D5 /* PickerView */,
 				23F4894A1FF3830300805245 /* CLVInfoTableViewCell.h */,
 				23F4894B1FF3830300805245 /* CLVInfoTableViewCell.m */,
@@ -597,6 +633,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F09B541FF233070098560F /* CLVOftenPlayedGameView.m in Sources */,
+				230618571FFE132200A79976 /* CLVFloatLayerTableCell.m in Sources */,
+				2306184C1FFDC7C900A79976 /* CLVFloatLayerView.m in Sources */,
 				23F09B571FF242920098560F /* CLVOfenPlayedBottomView.m in Sources */,
 				23077E171FFB93B20078A917 /* CLVDatePickerView.m in Sources */,
 				238D79551FF0EA850053BB89 /* COSetUpTableViewCell.m in Sources */,
@@ -606,6 +644,8 @@
 				23F4894C1FF3830300805245 /* CLVInfoTableViewCell.m in Sources */,
 				238D79581FF100920053BB89 /* UserInfoModel.m in Sources */,
 				23E78CBD1FF4C365001868D5 /* CLVAddPhotoTableViewCell.m in Sources */,
+				230618541FFDD53B00A79976 /* CLVFloatLayerDataSource.m in Sources */,
+				230618501FFDCC9600A79976 /* CLVFLoatViewConstans.m in Sources */,
 				238D792D1FECDB090053BB89 /* main.m in Sources */,
 				23E78CB91FF49481001868D5 /* KWAreaPickerView.m in Sources */,
 				23077E1A1FFBAA800078A917 /* CLVDateDatabaseService.m in Sources */,
